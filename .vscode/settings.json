@@ -1,0 +1,135 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "window.openFilesInNewWindow": "on",
+    "comments.openPanel": "neverOpen",
+    "window.openFoldersInNewWindow": "on",
+    "go.formatTool": "goimports",
+    "go.autocompleteUnimportedPackages": true,
+    "go.coverOnTestPackage": false,
+    "editor.formatOnSave": true,
+    "go.useLanguageServer": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "remote.WSL.fileWatcher.polling": true,
+    "remote.WSL.fileWatcher.pollingInterval": 10000,
+    "files.watcherExclude": {
+        "**/pkg/**": true
+    },
+    "go.buildFlags": [
+        "-v"
+    ],
+    "go.addTags": {
+        "transform": "camelcase",
+        "options": "json=omitempty",
+        "promptForTags": false,
+        "tags": "json,xml"
+    },
+    "go.editorContextMenuCommands": {
+        "addImport": true,
+        "addTags": true,
+        "removeTags": true,
+        "fillStruct": true,
+        "generateTestForFunction": true,
+        "testCoverage": false,
+        "toggleTestFile": false
+    },
+    "explorer.confirmDragAndDrop": false,
+    "todo-tree.filtering.ignoreGitSubmodules": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "DONE"
+    ],
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    "leek-fund.funds": [
+        "001593",
+        "010317"
+    ],
+    "leek-fund.stocks": [
+        "usr_sina",
+        "sh000001",
+        "sh000300",
+        "sh000016",
+        "sh000688",
+        "sh000905",
+        "sh601360",
+        "hk09988",
+        "hk00700",
+        "hk03690",
+        "hk01810",
+        "usr_bidu",
+        "usr_tcehy",
+        "usr_ntes",
+        "usr_pdd",
+        "usr_iq",
+        "usr_baba",
+        "hk00241",
+        "usr_wb",
+        "usr_momo",
+        "usr_goog",
+        "usr_amzn",
+        "usr_fb",
+        "usr_jd",
+        "sz399001",
+        "sz399006",
+        "sz399005",
+        "hkHSI",
+        "usr_dji",
+        "usr_ixic"
+    ],
+    "leek-fund.interval": 10000,
+    "cmake.configureOnOpen": true,
+    "remote.SSH.remotePlatform": {
+        "remote_server_name": "linux"
+    },
+    "leek-fund.stockSort": -1,
+    "leek-fund.fundSort": -1,
+    "leek-fund.statusBarStock": [
+        "usr_sina"
+    ],
+    "leek-fund.stocksRemind": {},
+    // vscode-proto3插件配置
+    "protoc": {
+        // protoc.exe所在目录
+        "path": "D:\\code\\tools\\protoc.exe",
+        // 保存时自动编译
+        "compile_on_save": true,
+        "options": [
+            // go编译输出指令
+            // "--go_out=plugins=grpc:.",
+            "--go_out=${workspaceRoot}\\simple",
+            "--proto_path=${workspaceRoot}\\simple",
+            "--proto_path=${env.GOPATH}/src",
+        ]
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+    },
+    "code-runner.ignoreSelection": true,
+    "code-runner.terminalRoot": "/mnt/",
+}
