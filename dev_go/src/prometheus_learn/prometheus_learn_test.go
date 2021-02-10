@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/qiuye2015/dev_go/src/fileutil"
+	"github.com/qiuye2015/vscode_dev/dev_go/src/fileutil"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
