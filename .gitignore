@@ -286,3 +286,7 @@ tags
 # Ignore all local history of files
 .history
 .ionide
+
+### By FJP ###
+dev_go/bin
+dev_go/pkg
