@@ -290,3 +290,4 @@ tags
 ### By FJP ###
 dev_go/bin
 dev_go/pkg
+dev_go/src/pkg/
