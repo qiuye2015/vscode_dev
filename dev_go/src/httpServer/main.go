@@ -45,8 +45,8 @@ func httpServerV3() {
 	mux.Handle("/v3", &myHandler{})
 
 	server := &http.Server{
-		Addr:         ":6666",
-		WriteTimeout: time.Second * 3, //设置3秒的写超时
+		Addr:         ":8000",
+		WriteTimeout: time.Second * 10, //设置3秒的写超时
 		Handler:      mux,
 	}
 	log.Println("Starting v3 httpserver")
