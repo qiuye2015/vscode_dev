@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/qiuye2015/vscode_dev/dev_go/src/calculator"
-)
+import "github.com/qiuye2015/vscode_dev/dev_go/calculator"
 
 func main() {
 	total := calculator.Sum(3, 5)

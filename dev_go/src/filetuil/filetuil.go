@@ -3,11 +3,12 @@ package filetuil
 import (
 	"bufio"
 	"fmt"
-	"github.com/fsnotify/fsnotify"
 	"io"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/fsnotify/fsnotify"
 )
 
 func FileWatcher(actions map[string]func(path string) error) {

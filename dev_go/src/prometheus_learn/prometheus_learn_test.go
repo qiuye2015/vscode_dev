@@ -11,10 +11,9 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/qiuye2015/vscode_dev/dev_go/src/fileutil"
-
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
+	"github.com/qiuye2015/vscode_dev/dev_go/filetuil"
 )
 
 func TestHelloWorld(t *testing.T) {
@@ -62,7 +61,7 @@ func load(s string) error {
 		return err
 	}
 	_resMap := make(map[string]float64, 0)
-	for k, _ := range tmp {
+	for k := range tmp {
 
 		Vec := strings.Split(k, ". ")
 		if len(Vec) != 2 {
