@@ -43,7 +43,7 @@ func load(s string) error {
 			unsafe.Pointer(&_resMap))
 
 		fmt.Println("len:", len(*resMap))
-		for k, _ := range *resMap {
+		for k := range *resMap {
 			fmt.Println(k)
 		}
 	}

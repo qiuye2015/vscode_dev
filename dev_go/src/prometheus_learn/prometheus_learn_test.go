@@ -24,7 +24,7 @@ func TestHelloWorld(t *testing.T) {
 	watchStock()
 	//TODO:
 	// 等待信号
-	sigChan := make(chan os.Signal)
+	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM)
 	for {
 		sig := <-sigChan
@@ -40,7 +40,7 @@ var (
 		Help: "fjp_stock",
 	}, []string{"company"})
 	addr = flag.String("listen-address", ":9999", "The address to listen on for HTTP requests.")
-	path = flag.String("watch_file", "./text", "The path to monitor")
+	path = flag.String("watch_file", "./test.txt", "The path to monitor")
 )
 
 func watchStock() {
