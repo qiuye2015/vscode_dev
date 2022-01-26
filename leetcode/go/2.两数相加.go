@@ -14,10 +14,6 @@
  */
 package main
 
-import "leetcode_fjp/data_structures"
-
-type ListNode = data_structures.ListNode
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	carry, dummy := 0, new(ListNode)
 	for cur := dummy; l1 != nil || l2 != nil || carry > 0; cur = cur.Next {

@@ -5,6 +5,9 @@ import (
 	"leetcode_fjp/data_structures"
 )
 
+type TreeNode = data_structures.TreeNode
+type ListNode = data_structures.ListNode
+
 func main() {
 	// mainTwoSum()
 	// mainAddTwoNumbers()
