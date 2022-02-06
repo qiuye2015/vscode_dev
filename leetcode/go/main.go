@@ -11,6 +11,7 @@ type ListNode = data_structures.ListNode
 func main() {
 	// mainTwoSum()
 	// mainAddTwoNumbers()
+	// mainReverseList()
 }
 
 //---------
@@ -30,4 +31,11 @@ func mainAddTwoNumbers() {
 	data_structures.PrintList(l2)
 	l3 := addTwoNumbers(l1, l2)
 	data_structures.PrintList(l3)
+}
+func mainReverseList() {
+	nums1 := []int{1, 2, 3, 4, 5}
+	l1 := data_structures.Ints2List(nums1)
+	data_structures.PrintList(l1)
+	l2 := reverseList(l1)
+	data_structures.PrintList(l2)
 }
