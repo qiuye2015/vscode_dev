@@ -12,6 +12,7 @@ func main() {
 	// mainTwoSum()
 	// mainAddTwoNumbers()
 	// mainReverseList()
+	// mainGetLeastNumbers()
 }
 
 //---------
@@ -38,4 +39,12 @@ func mainReverseList() {
 	data_structures.PrintList(l1)
 	l2 := reverseList(l1)
 	data_structures.PrintList(l2)
+}
+
+func mainGetLeastNumbers() {
+	// nums := []int{0, 1, 2, 1}
+	// ret := getLeastNumbers(nums, 1)
+	nums := []int{0, 0, 0, 2, 0, 5}
+	ret := getLeastNumbers(nums, 0)
+	fmt.Println(ret)
 }

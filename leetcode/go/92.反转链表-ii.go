@@ -3,6 +3,7 @@
  *
  * [92] 反转链表 II
  */
+package main
 
 // @lc code=start
 /**
@@ -29,4 +30,3 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 }
 
 // @lc code=end
-

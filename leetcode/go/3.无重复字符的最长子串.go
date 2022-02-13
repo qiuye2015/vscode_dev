@@ -3,7 +3,7 @@
  *
  * [3] 无重复字符的最长子串
  */
-// package main
+package main
 
 // @lc code=start
 func lengthOfLongestSubstring(s string) int {
