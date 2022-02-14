@@ -3,6 +3,9 @@
  *
  * [56] 合并区间
  */
+package main
+
+import "sort"
 
 // @lc code=start
 func merge(intervals [][]int) [][]int {
@@ -24,4 +27,3 @@ func merge(intervals [][]int) [][]int {
 }
 
 // @lc code=end
-
