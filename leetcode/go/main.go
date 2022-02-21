@@ -13,6 +13,7 @@ func main() {
 	// mainAddTwoNumbers()
 	// mainReverseList()
 	// mainGetLeastNumbers()
+	mainSubsetsWithDup()
 }
 
 //---------
@@ -46,5 +47,10 @@ func mainGetLeastNumbers() {
 	// ret := getLeastNumbers(nums, 1)
 	nums := []int{0, 0, 0, 2, 0, 5}
 	ret := getLeastNumbers(nums, 0)
+	fmt.Println(ret)
+}
+func mainSubsetsWithDup() {
+	nums := []int{1, 2, 2}
+	ret := subsetsWithDup(nums)
 	fmt.Println(ret)
 }
