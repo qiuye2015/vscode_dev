@@ -19,7 +19,7 @@ import "math"
 func isValidBST(root *TreeNode) bool {
 	var dfs func(root *TreeNode, minV, maxV int) bool
 	dfs = func(root *TreeNode, minV, maxV int) bool {
-		if root == nil { // 不会走到
+		if root == nil {
 			return true
 		}
 		if root.Val <= minV || root.Val >= maxV {
