@@ -5,8 +5,6 @@
  */
 package main
 
-import "math"
-
 // @lc code=start
 func myAtoi(s string) int {
 	//空格，非数字，正负号
@@ -14,7 +12,6 @@ func myAtoi(s string) int {
 	ret, sign := 0, 1
 	maxInt := 1<<31 - 1 //最大正数 math.MaxInt32
 	minInt := -1 << 31  //最小负数 math.MinInt32
-	math.MaxInt
 	//空格
 	for idx < n && (s[idx] == ' ') {
 		idx++
