@@ -1,0 +1,154 @@
+# run:
+# output:
+# linters-settings:
+# linters:
+# issues:
+# severity:
+
+run:
+  concurrency: 4
+  timeout: 5m
+  tests: false
+  skip-dirs:
+      - src/external_libs
+  skip-dirs-use-default: false   # - vendor$, third_party$, testdata$, examples$, Godeps$, builtin$
+
+output:
+    # format: tab
+    path-prefix: ""
+    format: colored-line-number
+    print-issued-lines: false
+
+linters-settings:
+  gci:
+    # local-prefixes: github.com/org/project
+    sections:
+      # Groups all imports with the specified Prefix.
+      # - prefix(github.com/org/project)
+  goimports:
+    # local-prefixes: github.com/beego/beego
+  lll:
+    line-length: 100
+    tab-width: 4
+
+linters:
+  # enable-all: true  # Default: false
+  # disable-all: true   # Default: false
+  enable:
+    # Enabled by Default
+    - deadcode
+    - errcheck
+    - gosimple
+    - govet
+    # - ineffassign
+    - staticcheck
+    - structcheck
+    # - typecheck
+    - unused
+    - varcheck
+
+    # Disabled by Default
+    # - asciicheck
+    # - bidichk
+    - bodyclose
+    # - containedctx
+    # - contextcheck
+    # - cyclop
+    # - decorder
+    - depguard
+    - dogsled
+    # - dupl
+    # - durationcheck
+    #- errchkjson
+    # - errname
+    # - errorlint
+    # - execinquery
+    # - exhaustive
+    # - exhaustivestruct
+    # - exhaustruct
+    # - exportloopref
+    # - forbidigo
+    # - forcetypeassert
+    - funlen
+    # - gci
+    # - gochecknoglobals
+    - gochecknoinits
+    # - gocognit
+    # - goconst
+    # - gocritic
+    - gocyclo
+    # - godot
+    # - godox
+    # - goerr113
+    - gofmt
+    # - gofumpt
+    # - goheader
+    - goimports
+    # - golint
+    # - gomnd
+    # - gomoddirectives
+    # - gomodguard
+    # - goprintffuncname
+    - gosec
+    # - grouper
+    # - ifshort
+    # - importas
+    # - interfacer
+    # - ireturn
+    # - lll
+    # - maintidx
+    # - makezero
+    # - maligned
+    # - misspell
+    # - nakedret
+    # - nestif
+    # - nilerr
+    # - nilnil
+    # - nlreturn
+    # - noctx
+    # - nolintlint
+    # - nonamedreturns
+    # - nosprintfhostport
+    # - paralleltest
+    # - prealloc
+    # - predeclared
+    # - promlinter
+    # - revive
+    # - rowserrcheck
+    # - scopelint
+    # - sqlclosecheck
+    # - stylecheck
+    # - tagliatelle
+    # - tenv
+    # - testpackage
+    # - thelper
+    # - tparallel
+    - unconvert
+    # - unparam
+    # - varnamelen
+    # - wastedassign
+    - whitespace
+    # - wrapcheck
+    # - wsl
+
+issues:
+  # new: true # Show only new issues
+  fix: true
+  max-same-issues: 0
+exclude-rules:
+  - linters:
+      - structcheck
+      - unused
+    text: "`data` is unused"
+  - linters:
+      - staticcheck
+    text: "SA1019:"
+  - linters:
+      - revive
+    text: "var-naming:"
+  - linters:
+      - revive
+    text: "exported:"
+  - path: _test\.go
+    linters:
+      - gosec # security is not make sense in tests
