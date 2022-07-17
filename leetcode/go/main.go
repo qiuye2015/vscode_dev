@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"leetcode_fjp/data_structures"
 )
 
@@ -13,9 +12,11 @@ func main() {
 	// mainAddTwoNumbers()
 	// mainReverseList()
 	// mainGetLeastNumbers()
-	mainSubsetsWithDup()
+	// mainSubsetsWithDup()
+	// mainMinPathSum()
 }
 
+/*
 //---------
 func mainTwoSum() {
 	nums := []int{2, 7, 11, 15}
@@ -54,3 +55,13 @@ func mainSubsetsWithDup() {
 	ret := subsetsWithDup(nums)
 	fmt.Println(ret)
 }
+
+func mainMinPathSum() {
+	grid := [][]int{
+		{1, 3, 1},
+		{1, 5, 1},
+		{4, 2, 1},
+	}
+	fmt.Println(minPathSum(grid))
+}
+*/
