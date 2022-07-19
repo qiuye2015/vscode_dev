@@ -1,11 +1,20 @@
 package main
 
 import (
+	"fmt"
 	"leetcode_fjp/data_structures"
 )
 
 type TreeNode = data_structures.TreeNode
 type ListNode = data_structures.ListNode
+
+func matrixToString(matrix [][]int) (s string) {
+	s = "\n"
+	for _, m := range matrix {
+		s += fmt.Sprintf("%v\n", m)
+	}
+	return
+}
 
 func main() {
 	// mainTwoSum()
@@ -14,6 +23,7 @@ func main() {
 	// mainGetLeastNumbers()
 	// mainSubsetsWithDup()
 	// mainMinPathSum()
+	mainRotate()
 }
 
 /*
@@ -65,3 +75,27 @@ func mainMinPathSum() {
 	fmt.Println(minPathSum(grid))
 }
 */
+
+func mainRotate() {
+	matrix := [][]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}
+	rotate(matrix)
+	fmt.Println(matrix)
+}
+func rotate(matrix [][]int) {
+	reverse := func(nums []int) {
+		for i, j := 0, len(nums)-1; i < j; i, j = i+1, j-1 {
+			nums[i], nums[j] = nums[j], nums[i]
+		}
+	}
+	n := len(matrix)
+	for i := 0; i < n; i++ {
+		for j := i + 1; j < n; j++ {
+			matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+		}
+		reverse(matrix[i])
+	}
+}
