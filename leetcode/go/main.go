@@ -23,7 +23,8 @@ func main() {
 	// mainGetLeastNumbers()
 	// mainSubsetsWithDup()
 	// mainMinPathSum()
-	mainRotate()
+	// mainRotate()
+	mainTranspose()
 }
 
 /*
@@ -98,4 +99,38 @@ func rotate(matrix [][]int) {
 		}
 		reverse(matrix[i])
 	}
+}
+
+func mainTranspose() {
+	// mat := [][]int{
+	// 	{1, 2, 3},
+	// 	{4, 5, 6},
+	// }
+	mat := [][]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}
+	fmt.Println(transpose(mat))
+}
+func transpose(matrix [][]int) [][]int {
+	m, n := len(matrix), len(matrix[0])
+	ret := make([][]int, n)
+	for i := 0; i < n; i++ {
+		ret[i] = make([]int, m)
+	}
+	fmt.Println(m, n, ret)
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			// ret[i][j], ret[j][i] = matrix[j][i], matrix[i][j]
+			// if j > i {
+			ret[j][i] = matrix[i][j]
+			// } else {
+			// ret[j][i] = matrix[j][i]
+			// }
+
+		}
+		fmt.Println("fjp", ret[i])
+	}
+	return ret
 }
