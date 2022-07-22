@@ -122,15 +122,8 @@ func transpose(matrix [][]int) [][]int {
 	fmt.Println(m, n, ret)
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
-			// ret[i][j], ret[j][i] = matrix[j][i], matrix[i][j]
-			// if j > i {
 			ret[j][i] = matrix[i][j]
-			// } else {
-			// ret[j][i] = matrix[j][i]
-			// }
-
 		}
-		fmt.Println("fjp", ret[i])
 	}
 	return ret
 }
