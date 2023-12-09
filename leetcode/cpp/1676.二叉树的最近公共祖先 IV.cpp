@@ -4,8 +4,6 @@
  * [1676] 二叉树的最近公共祖先 IV
  */
 
-package main
-
 // @lc code=start
 /**
  * Definition for a binary tree node.
