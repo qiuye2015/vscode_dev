@@ -30,6 +30,11 @@ int main(){
  vim /home/fjp/.lc/leetcode.cn/user.json
 # ,"paid":true
 ```
+
+# local test
+```bash
+go run main.go 18.四数之和.go 
+```
 # TODO
 ## 字节跳动 
 LCP 04. 覆盖

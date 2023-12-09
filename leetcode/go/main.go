@@ -24,7 +24,8 @@ func main() {
 	// mainSubsetsWithDup()
 	// mainMinPathSum()
 	// mainRotate()
-	mainTranspose()
+	// mainTranspose()
+	mainFourSum()
 }
 
 /*
@@ -75,7 +76,6 @@ func mainMinPathSum() {
 	}
 	fmt.Println(minPathSum(grid))
 }
-*/
 
 func mainRotate() {
 	matrix := [][]int{
@@ -83,10 +83,10 @@ func mainRotate() {
 		{4, 5, 6},
 		{7, 8, 9},
 	}
-	rotate(matrix)
+	_rotate(matrix)
 	fmt.Println(matrix)
 }
-func rotate(matrix [][]int) {
+func _rotate(matrix [][]int) {
 	reverse := func(nums []int) {
 		for i, j := 0, len(nums)-1; i < j; i, j = i+1, j-1 {
 			nums[i], nums[j] = nums[j], nums[i]
@@ -111,9 +111,9 @@ func mainTranspose() {
 		{4, 5, 6},
 		{7, 8, 9},
 	}
-	fmt.Println(transpose(mat))
+	fmt.Println(_transpose(mat))
 }
-func transpose(matrix [][]int) [][]int {
+func _transpose(matrix [][]int) [][]int {
 	m, n := len(matrix), len(matrix[0])
 	ret := make([][]int, n)
 	for i := 0; i < n; i++ {
@@ -126,4 +126,11 @@ func transpose(matrix [][]int) [][]int {
 		}
 	}
 	return ret
+}
+*/
+
+func mainFourSum() {
+	nums := []int{1, 0, -1, 0, -2, 2}
+	target := 0
+	fmt.Println(fourSum(nums, target))
 }
